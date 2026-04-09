@@ -75,7 +75,7 @@ export function HeroSection() {
         {/* Label chip */}
         <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-widest mb-6 border border-white/30">
           <Sparkles size={12} className="text-white" />
-          Brand Campaign Strategy 2025
+          Brand Campaign Strategy 2026
         </div>
 
         {/* Main wordmark + headline */}

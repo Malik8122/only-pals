@@ -51,7 +51,7 @@ export default function CoreCampaignSection() {
           style={{ transitionDelay: "100ms" }}
           data-ocid="campaign-label"
         >
-          Core Campaign 2025
+          Core Campaign 2026
         </p>
 
         {/* FOUND — massive display */}

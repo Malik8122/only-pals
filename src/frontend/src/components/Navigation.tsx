@@ -56,9 +56,11 @@ export function Navigation() {
           className="flex items-center gap-2 group"
           aria-label="Only Pals - scroll to top"
         >
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg font-bold text-primary-foreground gradient-primary shadow-sm">
-            OP
-          </div>
+          <img
+            src="/assets/logo.png"
+            alt="Only Pals logo"
+            className="h-10 w-auto object-contain"
+          />
           <span className="font-display font-bold text-lg text-foreground">
             Only<span className="text-primary"> Pals</span>
           </span>

@@ -132,16 +132,20 @@ export function ConclusionSection() {
           </button>
 
           {/* Brand mark */}
-          <div className="flex flex-col items-center gap-2 mt-4 opacity-70">
+          <div className="flex flex-col items-center gap-2 mt-4 opacity-80">
             <div
-              className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-display font-black"
+              className="rounded-2xl p-2"
               style={{
-                background: "oklch(0.6 0.2 13 / 0.4)",
-                border: "2px solid oklch(0.7 0.15 30 / 0.4)",
-                color: "oklch(0.98 0.01 30)",
+                background: "oklch(0.6 0.2 13 / 0.25)",
+                border: "1px solid oklch(0.7 0.15 30 / 0.35)",
               }}
             >
-              OP
+              <img
+                src="/assets/logo.png"
+                alt="Only Pals logo"
+                className="h-12 w-auto object-contain"
+                style={{ maxWidth: "48px" }}
+              />
             </div>
             <span
               className="text-xs font-semibold uppercase tracking-widest"

@@ -136,20 +136,24 @@ export default function BrandIdentitySection() {
             <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
               Logo Concept
             </p>
-            {/* Visual: overlapping circles */}
-            <div className="flex justify-center mb-6 relative h-24">
-              <div className="absolute w-20 h-20 rounded-full bg-primary/20 border-2 border-primary left-1/2 -translate-x-8 top-1/2 -translate-y-1/2" />
-              <div className="absolute w-20 h-20 rounded-full bg-secondary/20 border-2 border-secondary left-1/2 translate-x-0 top-1/2 -translate-y-1/2" />
-              <div className="absolute left-1/2 -translate-x-3 top-1/2 -translate-y-1/2 w-6 h-12 bg-[oklch(0.58_0.13_170)]/30 rounded-full mix-blend-multiply" />
+            {/* Actual logo */}
+            <div className="flex justify-center mb-6 bg-white/80 rounded-2xl py-4 px-6">
+              <img
+                src="/assets/logo.png"
+                alt="Only Pals logo"
+                className="h-32 w-auto object-contain"
+                style={{ maxWidth: "160px" }}
+              />
             </div>
             <h3 className="font-display font-bold text-2xl text-foreground mb-2">
-              Overlapping Circles
+              Only Pals Logo
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Two circles converging at the center — one for{" "}
-              <span className="text-primary font-semibold">parent</span>, one
-              for <span className="text-secondary font-semibold">child</span>.
-              The overlap is the connection. Simple. Universal. Warm.
+              A mark built on trust and connection — designed to feel{" "}
+              <span className="text-primary font-semibold">warm</span>,
+              approachable, and{" "}
+              <span className="text-secondary font-semibold">safe</span> for
+              children and parents alike.
             </p>
             <div className="flex gap-2 mt-4 flex-wrap">
               <Chip color="primary">Connection</Chip>
