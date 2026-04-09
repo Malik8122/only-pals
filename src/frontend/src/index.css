@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Bricolage Grotesque", sans-serif;
+    --font-body: "Figtree", sans-serif;
+    --font-mono: monospace;
+    --radius: 1.25rem;
+
+    --background: 0.99 0.005 0;
+    --foreground: 0.18 0.01 250;
+    --card: 1.0 0 0;
+    --card-foreground: 0.18 0.01 250;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.18 0.01 250;
+
+    --primary: 0.6 0.2 13;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.58 0.13 170;
+    --secondary-foreground: 0.98 0 0;
+    --muted: 0.88 0.01 0;
+    --muted-foreground: 0.42 0.01 250;
+
+    --accent: 0.72 0.15 245;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.92 0.01 0;
+    --input: 0.94 0.01 0;
+    --ring: 0.6 0.2 13;
+
+    --chart-1: 0.6 0.2 13;
+    --chart-2: 0.58 0.13 170;
+    --chart-3: 0.72 0.15 245;
+    --chart-4: 0.68 0.18 60;
+    --chart-5: 0.75 0.16 85;
+
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.18 0.01 250;
+    --sidebar-primary: 0.6 0.2 13;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.88 0.01 0;
+    --sidebar-accent-foreground: 0.42 0.01 250;
+    --sidebar-border: 0.92 0.01 0;
+    --sidebar-ring: 0.6 0.2 13;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.6 0.2 13) 0%,
+      oklch(0.58 0.13 170) 33%,
+      oklch(0.72 0.15 245) 66%,
+      oklch(0.68 0.18 60) 100%
+    );
+    --gradient-warm: linear-gradient(
+      180deg,
+      rgba(255, 107, 157, 0.08) 0%,
+      rgba(207, 179, 227, 0.04) 100%
+    );
+  }
+
+  .dark {
+    --background: 0.12 0.01 250;
+    --foreground: 0.96 0.02 250;
+    --card: 0.16 0.01 250;
+    --card-foreground: 0.96 0.02 250;
+    --popover: 0.2 0.01 250;
+    --popover-foreground: 0.96 0.02 250;
+
+    --primary: 0.72 0.18 13;
+    --primary-foreground: 0.12 0.01 250;
+
+    --secondary: 0.68 0.12 170;
+    --secondary-foreground: 0.96 0.02 250;
+    --muted: 0.22 0.01 250;
+    --muted-foreground: 0.68 0.01 250;
+
+    --accent: 0.78 0.14 245;
+    --accent-foreground: 0.12 0.01 250;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.12 0.01 250;
+
+    --border: 0.26 0.01 250;
+    --input: 0.26 0.01 250;
+    --ring: 0.72 0.18 13;
+
+    --chart-1: 0.72 0.18 13;
+    --chart-2: 0.68 0.12 170;
+    --chart-3: 0.78 0.14 245;
+    --chart-4: 0.75 0.16 60;
+    --chart-5: 0.82 0.14 85;
+
+    --sidebar: 0.16 0.01 250;
+    --sidebar-foreground: 0.96 0.02 250;
+    --sidebar-primary: 0.72 0.18 13;
+    --sidebar-primary-foreground: 0.12 0.01 250;
+    --sidebar-accent: 0.22 0.01 250;
+    --sidebar-accent-foreground: 0.82 0.01 250;
+    --sidebar-border: 0.26 0.01 250;
+    --sidebar-ring: 0.72 0.18 13;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-warm {
+    @apply bg-card border border-border rounded-2xl shadow-sm transition-smooth hover:shadow-md;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold transition-smooth hover:opacity-90 active:scale-95;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 bg-secondary text-secondary-foreground rounded-xl font-semibold transition-smooth hover:opacity-90 active:scale-95;
+  }
+
+  .text-heading {
+    @apply font-display font-bold text-foreground;
+  }
+
+  .text-body {
+    @apply font-body text-foreground;
+  }
+}
